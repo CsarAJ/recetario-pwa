@@ -1,0 +1,126 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff7b00;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.install-btn {
+  background: white;
+  color: #ff7b00;
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+main {
+  padding: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input, textarea, select, button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #ff7b00;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.recipe-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.recipe-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.favorite {
+  color: gold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+label {
+  font-weight: 500;
+  color: #444;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+  margin-top: 2rem;
+  background-color: #fafafa;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.app-footer p {
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .app-footer {
+    background-color: #1a1a1a;
+    color: #bbb;
+    border-top: 1px solid #333;
+  }
+}
+

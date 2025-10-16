@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Recetas 🍲</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <header class="app-header">
+    <h1>🍴 Mis Recetas</h1>
+    <button id="installButton" class="install-btn" style="display:none;">📲 Instalar App</button>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <form id="recipeForm">
+        <input type="hidden" id="recipeId">
+        <label>Nombre:</label>
+        <input type="text" id="name" required>
+        <label>Categoría:</label>
+        <input type="text" id="category" placeholder="Postre, Plato fuerte...">
+        <label>Ingredientes:</label>
+        <textarea id="ingredients" required></textarea>
+        <label>Preparación:</label>
+        <textarea id="instructions" required></textarea>
+        <label>Imagen:</label>
+        <input type="file" id="image" accept="image/*">
+        <button type="submit">💾 Guardar receta</button>
+      </form>
+
+      <div class="import-export">
+        <button id="exportBtn">📤 Exportar</button>
+        <input type="file" id="importFile" accept=".json">
+      </div>
+    </section>
+
+    <section class="filter-section">
+      <input type="text" id="search" placeholder="🔍 Buscar receta...">
+      <select id="filterCategory">
+        <option value="">Todas las categorías</option>
+      </select>
+      <button id="showFavorites">⭐ Favoritos</button>
+    </section>
+
+    <section id="recipeList" class="recipe-list"></section>
+  </main>
+
+  <footer class="app-footer">
+    <p>© 2025 CesarAugust</p>
+  </footer>
+  
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
